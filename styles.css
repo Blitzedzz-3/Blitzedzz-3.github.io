@@ -59,6 +59,7 @@ button {
 button:hover {
     background-color: #00cc00;
     transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6); /* Subtle glow effect */
 }
 
 button:active {
@@ -97,6 +98,10 @@ button:active {
     border: 2px solid #fff;
     border-radius: 5px;
     padding: 10px;
+    text-align: center;  /* Horizontally center the text */
+    line-height: 1.5;    /* Adjust vertical spacing */
+    white-space: pre-wrap; /* Preserve newlines */
+    overflow-wrap: break-word; /* Prevent text from overflowing */
     transition: background-color 0.3s ease;
 }
 
@@ -107,4 +112,23 @@ button:active {
 #copyMessage {
     margin-top: 10px;
     color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .description, .reviews, .message {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
 }
