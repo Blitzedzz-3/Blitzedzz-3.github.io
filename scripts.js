@@ -9,3 +9,6 @@ document.getElementById('copyButton').addEventListener('click', function() {
         copyMessage.style.opacity = 0;
     }, 2000);
 });
+document.getElementById('Contactbutton').addEventListener('click', function() {
+    window.location.href = "https://blitzedzz-2.github.io/VipperTrollingGuiWebsite/Support/"; 
+});
