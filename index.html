@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vipper Trolling GUI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="content-container">
+            <h1>Vipper Trolling GUI</h1>
+            <p class="description">The #1 Roblox script for trolling</p>
+            <button id="loadScriptButton" class="cta-button">Load Vipper Trolling GUI</button>
+            <div id="message" class="message"></div>
+
+            <section class="reviews">
+                <h2>Reviews</h2>
+                <p>No reviews yet. Be the first to leave one!</p>
+            </section>
+
+            <section class="script-section">
+                <h2>Copy the Script</h2>
+                <textarea id="robloxScript" readonly>
+loadstring(game:HttpGet('https://vippergui.blitzedzz.workers.dev/'))()
+                </textarea>
+                <button id="copyButton" class="cta-button">Copy Script to Clipboard</button>
+                <div id="copyMessage" class="message"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
