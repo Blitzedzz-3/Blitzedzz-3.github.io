@@ -10,5 +10,5 @@ document.getElementById('copyButton').addEventListener('click', function() {
     }, 2000);
 });
 document.getElementById('Contactbutton').addEventListener('click', function() {
-    window.location.href = "https://blitzedzz-2.github.io/VipperTrollingGuiWebsite/Support/"; 
+    window.location.href = "https://blitzedzz-2.github.io/Support"; 
 });
