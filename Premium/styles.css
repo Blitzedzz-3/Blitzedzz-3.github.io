@@ -115,6 +115,7 @@ button:active {
     margin-top: 10px;
     color: #ffcc00;
 }
+
 @media (max-width: 768px) {
     .container {
         width: 90%;
