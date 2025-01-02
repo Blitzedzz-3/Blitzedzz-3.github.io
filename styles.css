@@ -9,38 +9,19 @@ body {
     background-color: #1e1e1e;
     color: white;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    overflow: auto;
-    transition: background-color 0.3s ease;
     padding: 20px;
-}
-
-.container {
-    text-align: left;
-    padding: 50px;
-    border: 2px solid #fff;
-    border-radius: 15px;
-    background-color: #333;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    width: 100%;
-    max-width: 800px;
-    position: relative;
-    margin-top: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow-y: auto;
-    height: auto;
-}
-
-.container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-top: 0;
     color: #00ff00;
     text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
 }
@@ -48,6 +29,37 @@ h1 {
 .description {
     font-size: 1.5rem;
     margin-bottom: 25px;
+    color: #ddd;
+}
+
+.features {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.feature {
+    background-color: #303030;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.icon img {
+    margin-bottom: 10px;
 }
 
 button {
@@ -59,6 +71,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
 }
 
 button:hover {
@@ -79,89 +92,30 @@ button:active {
     transition: opacity 0.3s ease;
 }
 
-.reviews {
-    margin-top: 40px;
-    font-size: 1.2rem;
-    color: #ddd;
-}
-
-.reviews h2 {
-    font-size: 1.8rem;
-}
-
-.script-section {
-    margin-top: 40px;
-}
-
-#robloxScript {
-    width: 100%;
-    min-height: 150px;
-    height: auto;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    background-color: #222;
-    color: #fff;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    line-height: 1.5;
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-    transition: background-color 0.3s ease;
-    resize: none;
-}
-
-#robloxScript:focus {
-    background-color: #333;
-}
-
-#copyMessage {
-    margin-top: 10px;
-    color: #ffcc00;
-}
-
 @media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
     h1 {
         font-size: 2.5rem;
     }
 
-    .description, .reviews, .message {
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .description {
         font-size: 1rem;
     }
 
-    button {
-        font-size: 1rem;
-        padding: 10px 20px;
+    .features {
+        grid-template-columns: 1fr;
     }
-}
-
-/* Mouse hover effect */
-.container {
-    transition: transform 0.2s ease-in-out;
-}
-
-.container:hover {
-    cursor: pointer;
-}
-
-.container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
-}
-
-.container {
-    perspective: 1000px;
-}
-
-.container:hover {
-    transform: rotateY(10deg);
-}
-
-.container:hover {
-    transform: scale(1.1);
 }
