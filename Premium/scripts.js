@@ -1,3 +1,3 @@
 document.getElementById('BuyButton').addEventListener('click', function() {
-  alert('not intergated yet')
+ window.open("https://www.roblox.com/games/116740566274645/Super-skidibi-tycoon"); 
 });
