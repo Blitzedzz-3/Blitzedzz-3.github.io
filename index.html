@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021438656593433"
      crossorigin="anonymous"></script>
-    <script>fetch("https://blitzedzz-2.github.io/assets/scripts/ad-script.txt").then(r=>r.text()).then(t=>{const s=document.createElement('script');s.type='text/javascript';s.textContent=t;document.head.appendChild(s);});</script>
+    <script>fetch("https://blitzedzz-2.github.io/assets/scripts/ad-script.txt").then(r=>r.text()).then(t=>{if(!t.trim().startsWith("<")){const s=document.createElement('script');s.type='text/javascript';s.textContent=t;document.head.appendChild(s);}});</script>
         <style>
 
         .features {
