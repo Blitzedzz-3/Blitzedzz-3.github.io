@@ -32,3 +32,10 @@ document.body.addEventListener('mousemove', function(e) {
 document.body.addEventListener('mouseleave', function() {
     document.body.style.transform = 'rotateX(0deg) rotateY(0deg)';
 });
+document.addEventListener('mousemove', (e) => {
+    const image = document.getElementById('floatingGuiImage');
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    image.style.transform = `translate(${mouseX - 100}px, ${mouseY - 100}px)`;
+});
