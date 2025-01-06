@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,20 +9,17 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #1e1e1e;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    text-align: center;
+    margin: 0;
     padding: 20px;
     overflow: hidden;
-    text-align: center;
     transition: background-color 0.3s ease;
 }
 
+/* Title and Description */
 h1 {
     font-size: 3rem;
-    margin-top: 0;
+    margin-top: 20px;
     color: #00ff00;
     text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
 }
@@ -32,6 +30,7 @@ h1 {
     color: #ddd;
 }
 
+/* Features Section */
 .features {
     display: flex;
     gap: 20px;
@@ -60,6 +59,50 @@ h1 {
 
 .icon img {
     margin-bottom: 10px;
+}
+
+/* Interactive Feature Section */
+.interactive-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 30px;
+    position: relative;
+    text-align: left;
+}
+
+.feature-description {
+    max-width: 400px;
+    color: white;
+}
+
+.floating-image img {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    pointer-events: none;
+    transition: transform 0.1s ease;
+}
+
+/* Script Section */
+.script-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#robloxScript {
+    width: 100%;
+    max-width: 600px;
+    height: 120px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #2e2e2e;
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: none;
+    margin-bottom: 20px;
 }
 
 button {
@@ -92,20 +135,26 @@ button:active {
     transition: opacity 0.3s ease;
 }
 
-#robloxScript {
-    width: 100%;
-    max-width: 600px;
-    height: 120px;
-    padding: 10px;
-    font-size: 1rem;
-    background-color: #2e2e2e;
-    color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;  /* Rounding the corners */
-    resize: none; /* Disable resizing */
-    margin-bottom: 20px; /* Space between textarea and button */
+/* Reviews Section */
+.reviews {
+    margin-top: 50px;
 }
 
+.reviews h2 {
+    margin-bottom: 10px;
+}
+
+/* Premium Info Section */
+.premium-info {
+    margin-top: 50px;
+}
+
+/* Contact Section */
+.contact {
+    margin-top: 50px;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
@@ -117,6 +166,15 @@ button:active {
 
     .features {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .interactive-feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .floating-image img {
+        position: static;
     }
 }
 
