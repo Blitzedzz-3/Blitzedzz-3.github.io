@@ -1,5 +1,5 @@
 // Copy Script to Clipboard
-document.getElementById('copyButton').addEventListener('click', function () {
+document.getElementById('copyButton2').addEventListener('click', function () {
     var scriptText = document.getElementById('robloxScript');
     scriptText.select();
     document.execCommand('copy');
