@@ -125,7 +125,7 @@ button:active {
 #robloxScript {
     width: 100%;
     max-width: 600px;
-    height: 120px;
+    height: auto; /* Automatically adjust height to fit content */
     padding: 10px;
     font-size: 1rem;
     background-color: #2e2e2e;
@@ -133,7 +133,20 @@ button:active {
     border: 1px solid #ddd;
     border-radius: 10px;  /* Rounding the corners */
     resize: none; /* Disable resizing */
-    margin-bottom: 20px; /* Space between textarea and button */
+    margin: 0 auto; /* Center align within its container */
+    display: inline-block; /* Make it work well with inline layouts */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling if content is too long */
+}
+
+.script-section {
+    text-align: center; /* Center-align the entire section */
+}
+
+.script-container {
+    display: inline-flex; /* Place textarea and button on the same line */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center-align content */
 }
 
 @media (max-width: 768px) {
