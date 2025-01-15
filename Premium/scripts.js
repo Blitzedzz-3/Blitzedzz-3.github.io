@@ -1,4 +1,4 @@
-document.getElementById('BuyButton').addEventListener('click', function () {
+document.getElementById('PayWithRobux').addEventListener('click', function () {
     const overlay = document.getElementById('paymentOverlay');
     overlay.style.display = 'flex';
 
@@ -14,11 +14,14 @@ document.getElementById('BuyButton').addEventListener('click', function () {
                 robuxButton.disabled = true;
                 robuxButton.style.cursor = 'not-allowed';
                 robuxMessage.textContent = 'This game is currently unavailable.';
+
             } else {
                 robuxButton.textContent = 'Pay with Robux';
                 robuxButton.disabled = false;
                 robuxButton.style.cursor = 'pointer';
                 robuxMessage.textContent = '';
+                window.open('https://www.roblox.com/games/116740566274645/Super-skidibi-tycoon');
+
             }
         })
         .catch(error => {
@@ -28,10 +31,6 @@ document.getElementById('BuyButton').addEventListener('click', function () {
 
 document.getElementById('PayWithCoinbase').addEventListener('click', function () {
     window.open('https://commerce.coinbase.com/checkout/076cc66d-dd0b-48f7-9ed6-c6c297a1df11');
-});
-
-document.getElementById('PayWithRobux').addEventListener('click', function () {
-    window.open('https://www.roblox.com/games/116740566274645/Super-skidibi-tycoon');
 });
 
 document.getElementById('paymentOverlay').addEventListener('click', function (e) {
