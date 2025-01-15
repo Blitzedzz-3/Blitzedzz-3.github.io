@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    background-color: #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #00ff00;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+}
+
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #00cc00;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ffcc00;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.reviews {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.reviews h2 {
+    font-size: 1.8rem;
+}
+
+.script-section {
+    margin-top: 40px;
+}
+
+#robloxScript {
+    width: 100%;
+    min-height: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    background-color: #222;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    transition: background-color 0.3s ease;
+    resize: none;
+}
+
+#robloxScript:focus {
+    background-color: #333;
+}
+
+#copyMessage {
+    margin-top: 10px;
+    color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .description, .reviews, .message {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
