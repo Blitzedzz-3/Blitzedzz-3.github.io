@@ -36,7 +36,7 @@ document.getElementById('PayWithCoinbase').addEventListener('click', async funct
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 name: "Vipper Trolling GUI Premium",
-                description: "Premium version of Vipper Trolling GUI",
+                description: "Vipper Trolling GUI PREMIUM",
                 amount: "5.00",
                 currency: "USD"
             })
