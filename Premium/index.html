@@ -5,40 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vipper Trolling GUI</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-
-        .features {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .feature {
-            background-color: #303030;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            width: 200px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .feature:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .icon img {
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <h1>Vipper Trolling GUI Premium</h1>
-        <p class="description">Get more with Vipper trolling GUI premium</p>
+        <p class="description">Get more with Vipper Trolling GUI Premium</p>
         <section class="features">
             <div class="feature">
                 <div class="icon">
@@ -58,7 +29,17 @@
         <p class="description">What are you waiting for? Get Vipper Trolling GUI Premium now!</p>
         <button id="BuyButton" class="smooth-button">Buy Now</button>
     </div>
-    <script src="scripts.js"></script>
 
+    <!-- Payment Overlay -->
+    <div id="paymentOverlay" class="overlay">
+        <div class="overlay-content">
+            <h2>Select a Payment Option</h2>
+            <button id="PayWithCoinbase" class="smooth-button">Pay with Coinbase</button>
+            <button id="PayWithRobux" class="smooth-button">Pay with Robux</button>
+            <p id="robuxMessage" class="description"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
