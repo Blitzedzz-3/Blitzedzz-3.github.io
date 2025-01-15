@@ -2,14 +2,14 @@ document.getElementById('PayWithRobux').addEventListener('click', function () {
     const overlay = document.getElementById('paymentOverlay');
     overlay.style.display = 'flex';
 
-    fetch('https://games.roblox.com/v1/games/multiget-playability-status?universeIds=6445496101')
+    fetch('https://corsproxy.io/?url=https://games.roblox.com/v1/games/multiget-playability-status?universeIds=6445496101')
         .then(response => response.json())
         .then(data => {
             const gameStatus = data[0];
             const robuxButton = document.getElementById('PayWithRobux');
             const robuxMessage = document.getElementById('robuxMessage');
 
-            if (gameStatus.playabilityStatus !== "Playable") {
+            if (gameStatus.isPlayable !== "true") {
                 robuxButton.textContent = 'Pay with Robux';
                 robuxButton.disabled = false;
                 robuxButton.style.cursor = 'pointer';
