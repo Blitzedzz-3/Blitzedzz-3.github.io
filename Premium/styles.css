@@ -135,6 +135,7 @@ button:active {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 300px;
 }
 
 .overlay-content h2 {
@@ -146,7 +147,6 @@ button:active {
 .smooth-button {
     margin: 10px;
 }
-
 @media (max-width: 768px) {
     .container {
         width: 90%;
