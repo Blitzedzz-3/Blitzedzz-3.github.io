@@ -1,11 +1,21 @@
 document.getElementById('BuyButton').addEventListener('click', function() {
  window.open("https://www.roblox.com/games/116740566274645/Super-skidibi-tycoon"); 
 });
-document.getElementById('SkipButton').disabled = true;
+const skipButton = document.getElementById('SkipButton');
+let countdown = 10;
+skipButton.disabled = true;
+skipButton.textContent = `Skip (${countdown}s)`;
+skipButton.style.cursor = "not-allowed";
 
-setTimeout(function() {
-    document.getElementById('SkipButton').disabled = false;
-    document.getElementById('SkipButton').addEventListener('click', function() {
-        window.location.replace("https://keyyy.blitzedzz.workers.dev/");
-    });
-}, 10000);
+const timer = setInterval(() => {
+    skipButton.textContent = `Skip (${--countdown}s)`;
+    if (countdown <= 0) {
+        clearInterval(timer);
+        skipButton.textContent = "Skip";
+        skipButton.disabled = false;
+        skipButton.style.cursor = "pointer";
+        skipButton.addEventListener('click', () => {
+            window.open("https://keyyy.blitzedzz.workers.dev/");
+        });
+    }
+}, 1000);
