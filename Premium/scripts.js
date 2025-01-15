@@ -54,6 +54,11 @@ document.getElementById('PayWithCoinbase').addEventListener('click', async funct
     }
 });
 
+document.getElementById('BuyButton').addEventListener('click', function () {
+    const overlay = document.getElementById('paymentOverlay');
+    overlay.style.display = 'flex';
+});
+
 document.getElementById('paymentOverlay').addEventListener('click', function (e) {
     if (e.target === this) {
         this.style.display = 'none';
