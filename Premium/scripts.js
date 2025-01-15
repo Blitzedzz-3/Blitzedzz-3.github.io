@@ -29,8 +29,29 @@ document.getElementById('PayWithRobux').addEventListener('click', function () {
         });
 });
 
-document.getElementById('PayWithCoinbase').addEventListener('click', function () {
-    window.open('https://commerce.coinbase.com/checkout/076cc66d-dd0b-48f7-9ed6-c6c297a1df11');
+document.getElementById('PayWithCoinbase').addEventListener('click', async function () {
+    try {
+        const response = await fetch('https://cold-bar-3c39.blitzedzz.workers.dev/create-charge', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: "Vipper Trolling GUI Premium",
+                description: "Premium version of Vipper Trolling GUI",
+                amount: "5.00",
+                currency: "USD"
+            })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            window.location.href = data.data.hosted_url;
+        } else {
+            alert('Failed to generate payment link. Please try again.');
+        }
+    } catch (error) {
+        console.error('Error fetching Coinbase payment link:', error);
+        alert('An error occurred. Please try again.');
+    }
 });
 
 document.getElementById('paymentOverlay').addEventListener('click', function (e) {
