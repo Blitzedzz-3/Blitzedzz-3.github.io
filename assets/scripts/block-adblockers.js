@@ -73,6 +73,7 @@ const detectedAdblock = async () => {
 detectedAdblock().then(result => {
     if (result) {
         document.body.innerHTML = '';
+        
         document.body.style.cssText = `
             background-color: red;
             color: white;
