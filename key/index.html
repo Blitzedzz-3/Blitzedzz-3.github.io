@@ -11,6 +11,19 @@
     .then(res => res.text())
     .then(eval)
     .catch(console.error);
+
+    function checkReferer() {
+      const allowedReferer = "adfoc.us";
+      const referrer = document.referrer;
+
+      if (referrer && referrer.includes(allowedReferer)) {
+
+      } else {
+        document.body.innerHTML = "<h1>BYPASS DETECTED</h1>";
+      }
+    }
+
+    window.onload = checkReferer;
     </script>
     
     <style>
