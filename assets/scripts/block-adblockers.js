@@ -1,6 +1,6 @@
 const checkmain = async () => {
     try {
-        const resp = await fetch("https://whomeenoaglauns.com/*");
+        const resp = await fetch("https://alwingulla.com/*");
         const text = await resp.text();
 
         return false;
