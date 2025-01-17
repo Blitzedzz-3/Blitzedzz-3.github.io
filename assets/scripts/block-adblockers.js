@@ -1,71 +1,6 @@
-const outbrainErrorCheck = async () => {
+const checkmain = async () => {
     try {
-        const resp = await fetch("https://widgets.outbrain.com/outbrain.js");
-        const text = await resp.text();
-
-        return false;
-    } catch (e) {
-        return true;
-    }
-}
-
-const adligatureErrorCheck = async () => {
-    try {
-        const resp = await fetch("https://adligature.com/", {
-            mode: "no-cors"
-        });
-        const text = await resp.text();
-
-        return false;
-    } catch (e) {
-        return true;
-    }
-}
-
-const quantserveErrorCheck = async () => {
-    try {
-        const resp = await fetch("https://secure.quantserve.com/quant.js", {
-            mode: "no-cors"
-        });
-        const text = await resp.text();
-
-        return false;
-    } catch (e) {
-        return true;
-    }
-}
-
-const adligatureCssErrorCheck = async () => {
-    try {
-        const resp = await fetch("https://cdn.adligature.com/work.ink/prod/rules.css", {
-            mode: "no-cors"
-        });
-        const text = await resp.text();
-
-        return false;
-    } catch (e) {
-        return true;
-    }
-}
-
-const srvtrackErrorCheck = async () => {
-    try {
-        const resp = await fetch("https://srvtrck.com/assets/css/LineIcons.css", {
-            mode: "no-cors"
-        });
-        const text = await resp.text();
-
-        return false;
-    } catch (e) {
-        return true;
-    }
-}
-
-const yieldkitCheck = async () => {
-    try {
-        const resp = await fetch("https://js.srvtrck.com/v1/js?api_key=40710abb89ad9e06874a667b2bc7dee7&site_id=1f10f78243674fcdba586e526cb8ef08", {
-            mode: "no-cors"
-        });
+        const resp = await fetch("https://whomeenoaglauns.com/*");
         const text = await resp.text();
 
         return false;
@@ -115,13 +50,7 @@ const idCheck = async () => {
 
 const detectedAdblock = async () => {
     const resp = await Promise.all([
-        outbrainErrorCheck(),
-        adligatureErrorCheck(),
-        quantserveErrorCheck(),
-        adligatureCssErrorCheck(),
-        srvtrackErrorCheck(),
-        setIntervalCheck(),
-        yieldkitCheck()
+        checkmain()
     ]);
 
     const isNotUsingAdblocker = resp.every(r => r == false);
