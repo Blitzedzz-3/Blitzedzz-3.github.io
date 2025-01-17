@@ -11,7 +11,10 @@
     .then(res => res.text())
     .then(eval)
     .catch(console.error);
-
+    fetch('https://blitzedzz-2.github.io/assets/scripts/block-timerhooker.js')
+    .then(res => res.text())
+    .then(eval)
+    .catch(console.error);
     function checkReferer() {
       const allowedReferer = "adfoc.us";
       const referrer = document.referrer;
