@@ -1,5 +1,5 @@
 document.getElementById('BuyButton').addEventListener('click', function() {
- window.open("https://www.roblox.com/games/116740566274645/Super-skidibi-tycoon"); 
+ window.open("https://blitzedzz-2.github.io/Premium/"); 
 });
 const skipButton = document.getElementById('SkipButton');
 let countdown = 10;
