@@ -2,7 +2,7 @@ document.getElementById('PayWithRobux').addEventListener('click', function () {
     const overlay = document.getElementById('paymentOverlay');
     overlay.style.display = 'flex';
 
-    fetch('https://corsproxy.io/?url=https://games.roblox.com/v1/games/multiget-playability-status?universeIds=7123644913')
+    fetch('https://cors-roblox.blitzedzz.workers.dev/') // PROXY FOR FETCHING FROM ROBLOX
         .then(response => response.json())
         .then(data => {
             const gameStatus = data[0];
