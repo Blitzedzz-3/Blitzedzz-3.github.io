@@ -34,24 +34,27 @@ document.getElementById('PayWithCoinbase').addEventListener('click', async funct
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                name: "Vipper Trolling GUI Premium",
-                description: "Vipper Trolling GUI PREMIUM",
-                amount: "5.00",
-                currency: "USD"
+                price_amount: "5.00",
+                price_currency: "USD",
+                pay_currency: "LTC",
+                order_description: "Vipper Trolling GUI PREMIUM",
+                success_url: "https://blitzedzz-2.github.io/crypto-payment/success.html",
+                cancel_url: "https://blitzedzz-2.github.io/crypto-payment/error.html"
             })
         });
 
         const data = await response.json();
         if (response.ok) {
-            window.location.href = data.data.hosted_url;
+            window.location.href = data.invoice_url;
         } else {
             alert('Failed to generate payment link. Please try again.');
         }
     } catch (error) {
-        console.error('Error fetching Coinbase payment link:', error);
+        console.error('Error fetching NOWPayments payment link:', error);
         alert('An error occurred. Please try again.');
     }
 });
+
 
 document.getElementById('BuyButton').addEventListener('click', function () {
     const overlay = document.getElementById('paymentOverlay');
