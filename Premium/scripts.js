@@ -2,7 +2,7 @@ document.getElementById('PayWithRobux').addEventListener('click', function () {
     const overlay = document.getElementById('paymentOverlay');
     overlay.style.display = 'flex';
 
-    fetch('https://corsproxy.io/?url=https://games.roblox.com/v1/games/multiget-playability-status?universeIds=6445496101')
+    fetch('https://corsproxy.io/?url=https://games.roblox.com/v1/games/multiget-playability-status?universeIds=7123644913')
         .then(response => response.json())
         .then(data => {
             const gameStatus = data[0];
@@ -19,7 +19,7 @@ document.getElementById('PayWithRobux').addEventListener('click', function () {
                 robuxButton.disabled = false;
                 robuxButton.style.cursor = 'pointer';
                 robuxMessage.textContent = '';
-                window.open('https://www.roblox.com/games/116740566274645/Super-skidibi-tycoon');
+                window.open('https://www.roblox.com/games/121134309039012/test-v2-ZOMBIE-GAME-BETA');
             }
         })
         .catch(error => {
