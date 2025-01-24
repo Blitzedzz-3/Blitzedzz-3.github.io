@@ -9,7 +9,7 @@ document.getElementById('PayWithRobux').addEventListener('click', function () {
             const robuxButton = document.getElementById('PayWithRobux');
             const robuxMessage = document.getElementById('robuxMessage');
 
-            if (gameStatus.isPlayable !== "true") {
+            if (!gameStatus.isPlayable) {
                 robuxButton.textContent = 'Pay with Robux (UNAVAILABLE)';
                 robuxButton.disabled = true;
                 robuxButton.style.cursor = 'not-allowed';
@@ -26,6 +26,7 @@ document.getElementById('PayWithRobux').addEventListener('click', function () {
             console.error('Error fetching game status:', error);
         });
 });
+
 
 document.getElementById('PayWithCoinbase').addEventListener('click', async function () {
     try {
