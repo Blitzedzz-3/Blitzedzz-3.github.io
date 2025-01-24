@@ -28,32 +28,33 @@ document.getElementById('PayWithRobux').addEventListener('click', function () {
 });
 
 
-document.getElementById('PayWithCoinbase').addEventListener('click', async function () {
-    try {
-        const response = await fetch('https://cold-bar-3c39.blitzedzz.workers.dev/create-charge', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                price_amount: "5.00",
-                price_currency: "USD",
-                pay_currency: "LTC",
-                order_description: "Vipper Trolling GUI PREMIUM",
-                success_url: "https://blitzedzz-2.github.io/crypto-payment/success.html",
-                cancel_url: "https://blitzedzz-2.github.io/crypto-payment/error.html"
-            })
-        });
+document.getElementById('PayWithNowPayments').addEventListener('click', async function () {
+  try {
+    const response = await fetch('https://cold-bar-3c39.blitzedzz.workers.dev/create-charge', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        amount: "5.00",
+        currency: "USD",
+        pay_currency: "BTC",
+        description: "Vipper Trolling GUI PREMIUM",
+        success_url: "https://blitzedzz-2.github.io/crypto-payment/success.html",
+        cancel_url: "https://blitzedzz-2.github.io/crypto-payment/error.html"
+      }),
+    });
 
-        const data = await response.json();
-        if (response.ok) {
-            window.location.href = data.invoice_url;
-        } else {
-            alert('Failed to generate payment link. Please try again.');
-        }
-    } catch (error) {
-        console.error('Error fetching NOWPayments payment link:', error);
-        alert('An error occurred. Please try again.');
+    const data = await response.json();
+    if (response.ok) {
+      window.location.href = data.invoice_url;
+    } else {
+      alert('Failed to generate payment link. Please try again.');
     }
+  } catch (error) {
+    console.error('Error creating NOWPayments charge:', error);
+    alert('An error occurred. Please try again.');
+  }
 });
+
 
 
 document.getElementById('BuyButton').addEventListener('click', function () {
