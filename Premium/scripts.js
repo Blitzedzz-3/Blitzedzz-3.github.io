@@ -29,30 +29,33 @@ document.getElementById('PayWithRobux').addEventListener('click', function () {
 
 
 document.getElementById('PayWithNowPayments').addEventListener('click', async function () {
-  try {
-    const response = await fetch('https://cold-bar-3c39.blitzedzz.workers.dev/create-charge', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        amount: "5.00",
-        currency: "USD",
-        pay_currency: "BTC",
-        description: "Vipper Trolling GUI PREMIUM",
-        success_url: "https://blitzedzz-2.github.io/crypto-payment/success.html",
-        cancel_url: "https://blitzedzz-2.github.io/crypto-payment/error.html"
-      }),
-    });
+    try {
+        const response = await fetch('https://cold-bar-3c39.blitzedzz.workers.dev/create-charge', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                amount: "5.00",
+                currency: "USD",
+                pay_currency: "BTC",
+                description: "Vipper Trolling GUI PREMIUM",
+                success_url: "https://blitzedzz-2.github.io/Premium/success.html",
+                cancel_url: "https://blitzedzz-2.github.io/Premium/error.html",
+            }),
+        });
 
-    const data = await response.json();
-    if (response.ok) {
-      window.location.href = data.invoice_url;
-    } else {
-      alert('Failed to generate payment link. Please try again.');
+        const data = await response.json();
+        console.log('API Response:', data); // Log the full response for debugging
+
+        if (response.ok && data.invoice_url) {
+            window.location.href = data.invoice_url;
+        } else {
+            alert('Failed to generate payment link. Please try again.');
+            console.error('Error in API Response:', data);
+        }
+    } catch (error) {
+        console.error('Error during API call:', error);
+        alert('An error occurred. Please try again.');
     }
-  } catch (error) {
-    console.error('Error creating NOWPayments charge:', error);
-    alert('An error occurred. Please try again.');
-  }
 });
 
 
