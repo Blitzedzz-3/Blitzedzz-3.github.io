@@ -30,33 +30,32 @@ document.getElementById('PayWithRobux').addEventListener('click', function () {
 
 document.getElementById('PayWithNowPayments').addEventListener('click', async function () {
     try {
-        const response = await fetch('https://cold-bar-3c39.blitzedzz.workers.dev/create-charge', {
+        const response = await fetch('https://cold-bar-3c39.blitzedzz.workers.dev/create-payment', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                amount: "5.00",
-                currency: "USD",
-                pay_currency: "BTC",
-                description: "Vipper Trolling GUI PREMIUM",
-                success_url: "https://blitzedzz-2.github.io/Premium/success.html",
-                cancel_url: "https://blitzedzz-2.github.io/Premium/error.html",
+                price_amount: 3999.5,
+                price_currency: "usd",
+                pay_currency: "btc",
+                ipn_callback_url: "https://blitzedzz-2.github.io/ipn/",
+                order_id: "Vipper trolling gui",
+                order_description: "lol",
             }),
         });
 
         const data = await response.json();
-        console.log('API Response:', data);
-
         if (response.ok && data.invoice_url) {
+            // Redirect user to the NOWPayments invoice
             window.location.href = data.invoice_url;
         } else {
-            alert('Failed to generate payment link. Please try again.');
-            console.error('Error in API Response:', data);
+            alert('Failed to create payment: ' + (data.error || 'Unknown error'));
         }
     } catch (error) {
-        console.error('Caught Error:', error);
+        console.error('Error:', error);
         alert('An error occurred. Please try again.');
     }
 });
+
 
 
 
