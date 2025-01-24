@@ -44,19 +44,20 @@ document.getElementById('PayWithNowPayments').addEventListener('click', async fu
         });
 
         const data = await response.json();
-        console.log('API Response:', data); // Log the full response for debugging
+        console.log('Response:', data);
 
         if (response.ok && data.invoice_url) {
             window.location.href = data.invoice_url;
         } else {
+            console.error('Error in API response:', data);
             alert('Failed to generate payment link. Please try again.');
-            console.error('Error in API Response:', data);
         }
     } catch (error) {
-        console.error('Error during API call:', error);
+        console.error('Caught Error:', error);
         alert('An error occurred. Please try again.');
     }
 });
+
 
 
 
