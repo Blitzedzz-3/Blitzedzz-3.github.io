@@ -125,7 +125,7 @@ button:active {
 
 #robloxScript {
     width: 100%;
-    max-width: 600px;
+    max-width: 100%;
     height: fit-content; /* Allow the height to adjust to fit the content */
     min-height: 50px; /* Set a minimum height */
     padding: 10px;
@@ -139,6 +139,8 @@ button:active {
     overflow: hidden; /* Hide the scrollbar */
     box-sizing: border-box; /* Include padding and border in width/height */
     white-space: pre-wrap; /* Preserve whitespace for multi-line scripts */
+    display: inline-block;
+    overflow-x: auto;
 }
 
 .script-section {
