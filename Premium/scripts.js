@@ -28,9 +28,7 @@ document.getElementById('PayWithRobux').addEventListener('click', function () {
 });
 
 
-document.getElementById('PayWithBTC').addEventListener('click', async function () {
-    window.open('https://pay-link.s3.us-west-2.amazonaws.com/index.html?uid=3a3b60532c4348d7');
-});
+
 
 
 
