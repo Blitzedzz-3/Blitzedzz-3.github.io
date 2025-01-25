@@ -63,7 +63,21 @@
     <div id="paymentOverlay" class="overlay">
         <div class="overlay-content">
             <h2>Select a Payment Option</h2>
-            <button id="PayWithBTC" class="smooth-button">Pay with BTC</button>
+            <button class="smooth-button" onclick="atlos.Pay({
+                merchantId: '8XOZ64KC9X',
+                orderId: `VTG_${Date.now()}`,
+                orderAmount: 5,
+                orderCurrency: 'USD',
+                subscription: null,
+                postbackUrl: null,
+                noBuyCrypto: false,
+                onSuccess: handleSuccess,
+                onCanceled: handleCanceled,
+                onCompleted: handleCompleted,
+                language: 'en',
+                theme: 'light'})">
+                Pay with Crypto
+            </button>
             <button id="PayWithRobux" class="smooth-button">Pay with Robux</button>
             <p id="robuxMessage" class="description"></p>
         </div>
