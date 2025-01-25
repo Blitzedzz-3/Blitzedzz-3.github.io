@@ -59,7 +59,7 @@ h1 {
 .gui-display img {
     width: 100%;
     border-radius: 10px;
-    backface-visibility: hidden; /* Hide the back during the flip */
+    backface-visibility: hidden; /* Hide the back during he flip */
 }
 
 .feature {
