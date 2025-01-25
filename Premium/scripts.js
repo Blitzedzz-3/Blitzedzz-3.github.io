@@ -29,10 +29,18 @@ document.getElementById('PayWithRobux').addEventListener('click', function () {
 
 
 
+function handleSuccess(transaction) {
+    console.log('Payment successful!', transaction);
+    window.location.replace("https://blitzedzz-2.github.io/crypto-handles/success.html");
+}
+function handleCanceled(transaction) {
+    window.location.replace("https://blitzedzz-2.github.io/crypto-handles/Failure.html");
+}
 
-
-
-
+function handleCompleted(transaction) {
+    console.log('Payment completed.', transaction);
+    window.location.replace("https://blitzedzz-2.github.io/crypto-handles/success.html");
+}
 
 document.getElementById('BuyButton').addEventListener('click', function () {
     const overlay = document.getElementById('paymentOverlay');
