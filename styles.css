@@ -1,77 +1,205 @@
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1e1e1e;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            padding: 20px;
-            overflow: hidden;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
 
-        h1 {
-            font-size: 3rem;
-            margin-top: 0;
-            color: #00ff00;
-            text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
-        }
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    color: #00ff00;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+}
 
-        .script-section {
-            text-align: center;
-        }
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: #ddd;
+}
 
-        #robloxScript {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            padding: 10px;
-            font-size: 1rem;
-            background-color: #2e2e2e;
-            color: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            resize: none;
-            margin: 0 auto;
-            display: inline-block;
-            white-space: nowrap;
-            overflow-x: auto;
-        }
+.features {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
 
-        .script-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
+.gui-display {
+    background-color: #252525;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    color: white;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
 
-        #copyButton {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #4caf50;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
-            display: inline-block;
-        }
+.gui-display:hover {
+    transform: rotateY(180deg);
+}
 
-        button:hover {
-            background-color: #00cc00;
-            transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
-        }
+.gui-display img {
+    width: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
 
-        button:active {
-            transform: scale(1);
-        }
+.feature {
+    background-color: #303030;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.feature-description {
+    max-width: 400px;
+    color: white;
+}
+
+.floating-image img {
+    width: 200px;
+    height: auto;
+    pointer-events: none;
+    transition: transform 0.2s ease;
+}
+
+.icon img {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #00cc00;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ffcc00;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#robloxScript {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #2e2e2e;
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: none;
+    margin: 0 auto;
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.script-section {
+    text-align: center;
+}
+
+.script-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#copyButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#copyButton:hover {
+    background-color: #00cc00;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
+#copyButton:active {
+    transform: scale(1);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
