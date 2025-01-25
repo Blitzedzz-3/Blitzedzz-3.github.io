@@ -124,7 +124,7 @@ button:active {
 
 
 #robloxScript {
-    width: 100%;
+    width: 300px;
     max-width: 100%;
     height: fit-content; /* Allow the height to adjust to fit the content */
     min-height: 50px; /* Set a minimum height */
