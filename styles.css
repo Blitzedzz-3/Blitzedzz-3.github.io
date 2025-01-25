@@ -122,21 +122,23 @@ button:active {
     transition: opacity 0.3s ease;
 }
 
+
 #robloxScript {
     width: 100%;
     max-width: 600px;
-    height: auto; /* Automatically adjust height to fit content */
+    height: fit-content; /* Allow the height to adjust to fit the content */
+    min-height: 50px; /* Set a minimum height */
     padding: 10px;
     font-size: 1rem;
+    font-family: 'Arial', sans-serif;
     background-color: #2e2e2e;
     color: white;
     border: 1px solid #ddd;
-    border-radius: 10px;  /* Rounding the corners */
-    resize: none; /* Disable resizing */
-    margin: 0 auto; /* Center align within its container */
-    display: inline-block; /* Make it work well with inline layouts */
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow-x: auto; /* Enable horizontal scrolling if content is too long */
+    border-radius: 10px;
+    resize: none; /* Disable manual resizing */
+    overflow: hidden; /* Hide the scrollbar */
+    box-sizing: border-box; /* Include padding and border in width/height */
+    white-space: pre-wrap; /* Preserve whitespace for multi-line scripts */
 }
 
 .script-section {
