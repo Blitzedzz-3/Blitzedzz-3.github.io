@@ -28,32 +28,8 @@ document.getElementById('PayWithRobux').addEventListener('click', function () {
 });
 
 
-document.getElementById('PayWithNowPayments').addEventListener('click', async function () {
-    try {
-        const response = await fetch('https://cold-bar-3c39.blitzedzz.workers.dev/create-payment', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                price_amount: 3999.5,
-                price_currency: "usd",
-                pay_currency: "btc",
-                ipn_callback_url: "https://blitzedzz-2.github.io/ipn/",
-                order_id: "Vipper trolling gui",
-                order_description: "lol",
-            }),
-        });
-
-        const data = await response.json();
-        if (response.ok && data.invoice_url) {
-            // Redirect user to the NOWPayments invoice
-            window.location.href = data.invoice_url;
-        } else {
-            alert('Failed to create payment: ' + (data.error || 'Unknown error'));
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('An error occurred. Please try again.');
-    }
+document.getElementById('PayWithBTC').addEventListener('click', async function () {
+    window.open('https://pay-link.s3.us-west-2.amazonaws.com/index.html?uid=3a3b60532c4348d7');
 });
 
 
