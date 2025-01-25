@@ -19,6 +19,17 @@
     });
     moremoney.start();
 </script>
+<script>
+    const scriptTextbox = document.getElementById('robloxScript');
+    scriptTextbox.addEventListener('input', () => {
+        scriptTextbox.style.height = 'auto';
+        scriptTextbox.style.height = scriptTextbox.scrollHeight + 'px';
+    });
+    window.addEventListener('DOMContentLoaded', () => {
+        scriptTextbox.style.height = scriptTextbox.scrollHeight + 'px';
+    });
+</script>
+
 </head>
 <body>
     <!-- Title at the very top -->
