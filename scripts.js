@@ -1,4 +1,3 @@
-// Copy Script to Clipboard
 document.getElementById('copyButton2').addEventListener('click', function () {
     var scriptText = document.getElementById('robloxScript');
     scriptText.select();
@@ -11,12 +10,10 @@ document.getElementById('copyButton2').addEventListener('click', function () {
     }, 2000);
 });
 
-// Redirect to Contact Page
 document.getElementById('Contactbutton').addEventListener('click', function () {
     window.location.href = "https://blitzedzz-2.github.io/Support";
 });
 
-// Redirect to Premium Page
 document.getElementById('PremiumButton').addEventListener('click', function () {
     window.location.href = "https://blitzedzz-2.github.io/Premium";
 });
