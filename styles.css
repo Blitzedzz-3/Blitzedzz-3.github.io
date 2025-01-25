@@ -41,7 +41,6 @@ h1 {
     width: 100%;
     max-width: 1200px;
 }
-
 .gui-display {
     background-color: #252525;
     border-radius: 10px;
@@ -49,18 +48,18 @@ h1 {
     max-width: 400px;
     margin: 20px auto;
     color: white;
-    transform-style: preserve-3d;
-    transition: transform 0.6s ease;
+    transform-style: preserve-3d; /* Enable 3D transformations */
+    transition: transform 0.6s ease; /* Smooth flip effect */
 }
 
 .gui-display:hover {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Rotate on hover */
 }
 
 .gui-display img {
     width: 100%;
     border-radius: 10px;
-    backface-visibility: hidden;
+    backface-visibility: hidden; /* Hide the back during the flip */
 }
 
 .feature {
@@ -83,14 +82,12 @@ h1 {
     max-width: 400px;
     color: white;
 }
-
 .floating-image img {
     width: 200px;
     height: auto;
     pointer-events: none;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease; /* Smooth rotation */
 }
-
 .icon img {
     margin-bottom: 10px;
 }
@@ -128,33 +125,33 @@ button:active {
 #robloxScript {
     width: 100%;
     max-width: 600px;
-    height: auto;
+    height: auto; /* Automatically adjust height to fit content */
     padding: 10px;
     font-size: 1rem;
     background-color: #2e2e2e;
     color: white;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    resize: none;
-    margin: 0 auto;
-    display: inline-block;
-    white-space: nowrap;
-    overflow-x: auto;
+    border-radius: 10px;  /* Rounding the corners */
+    resize: none; /* Disable resizing */
+    margin: 0 auto; /* Center align within its container */
+    display: inline-block; /* Make it work well with inline layouts */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling if content is too long */
 }
 
 .script-section {
-    text-align: center;
+    text-align: center; /* Center-align the entire section */
 }
-
 .script-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    display: flex; /* Switch to a vertical layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align content */
+    justify-content: center; /* Center-align items */
+    gap: 10px; /* Add spacing between the textarea and button */
 }
 
 #copyButton {
+    margin: 0; /* Remove left margin */
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -163,18 +160,10 @@ button:active {
     font-size: 1rem;
     cursor: pointer;
     display: inline-block;
-    margin-top: 10px;
+    align-self: center; /* Center the button horizontally */
 }
 
-#copyButton:hover {
-    background-color: #00cc00;
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
-}
 
-#copyButton:active {
-    transform: scale(1);
-}
 
 @media (max-width: 768px) {
     h1 {
