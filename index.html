@@ -94,14 +94,15 @@ loadstring(game:HttpGet('https://vippergui.blitzedzz.workers.dev/'))()
     <script src="scripts.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script>
-    const scriptTextbox = document.getElementById('robloxScript');
-    scriptTextbox.addEventListener('input', () => {
-        scriptTextbox.style.width = 'auto';
-        scriptTextbox.style.width = scriptTextbox.scrollWidth + 'px';
-    });
-    window.addEventListener('DOMContentLoaded', () => {
-        scriptTextbox.style.width = scriptTextbox.scrollWidth + 'px';
-    });
+const scriptTextbox = document.getElementById('robloxScript');
+scriptTextbox.addEventListener('input', () => {
+    scriptTextbox.style.width = 'auto';
+    scriptTextbox.style.width = scriptTextbox.scrollWidth + 'px';
+});
+window.addEventListener('DOMContentLoaded', () => {
+    scriptTextbox.style.width = scriptTextbox.scrollWidth + 'px';
+});
+
     </script>
 </body>
 </html>
