@@ -1,3 +1,6 @@
+const STOP_LOOKING_AT_OUR_CODE_OR_ELSE = `VTG_${Date.now()}`;
+
+
 document.getElementById('PayWithRobux').addEventListener('click', function () {
     const overlay = document.getElementById('paymentOverlay');
     overlay.style.display = 'flex';
