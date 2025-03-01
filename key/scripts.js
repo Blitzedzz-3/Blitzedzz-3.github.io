@@ -1,5 +1,5 @@
 document.getElementById('BuyButton').addEventListener('click', function() {
- window.open("https://blitzedzz-2.github.io/Premium/"); 
+ window.open("https://vippergui.blitzedzz.xyz/Premium/"); 
 });
 const skipButton = document.getElementById('SkipButton');
 let countdown = 10;
