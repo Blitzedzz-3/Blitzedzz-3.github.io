@@ -11,9 +11,9 @@ document.getElementById('copyButton2').addEventListener('click', function () {
 });
 
 document.getElementById('Contactbutton').addEventListener('click', function () {
-    window.location.href = "https://blitzedzz-2.github.io/Support";
+    window.location.href = "https://vippergui.blitzedzz.xyz/Support";
 });
 
 document.getElementById('PremiumButton').addEventListener('click', function () {
-    window.location.href = "https://blitzedzz-2.github.io/Premium";
+    window.location.href = "https://vippergui.blitzedzz.xyz/Premium";
 });
