@@ -23,7 +23,7 @@
         // Function to check the payment status
         async function checkPaymentStatus(walletAddress) {
             try {
-                const response = await fetch(`/check-payment?wallet=${walletAddress}`);
+                const response = await fetch(`https://premiumhandler.blitzedzz.workers.dev/check-payment?wallet=${walletAddress}`);
                 const data = await response.json();
 
                 if (response.status === 200) {
