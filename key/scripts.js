@@ -15,7 +15,7 @@ const timer = setInterval(() => {
         skipButton.disabled = false;
         skipButton.style.cursor = "pointer";
         skipButton.addEventListener('click', () => {
-            window.open("https://keyyy.blitzedzz.workers.dev/");
+            window.open("https://a-friggin-key-yo.blitzedzz.workers.dev/");
         });
     }
 }, 1000);
